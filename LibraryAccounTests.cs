@@ -25,9 +25,9 @@ namespace Libary.UnitTest
             actual = libaryAccount.LoanBook(book);
 
             //Assert
-            Assert.IsTrue(actual, "bug: a child reder didn't mange to loan a children book");
-            Assert.IsTrue(libaryAccount.LoanBooks.Contains(book), "bug: we took a book out of the libary,however is the loan book list");
-            Assert.IsFalse(libaryAccount.RreservedBooks.Contains(book), "bug : we took a book out of the library,however it is still ma");
+            Assert.IsTrue(actual, "bug: a child reader didn't manage to loan a children book");
+            Assert.IsTrue(libaryAccount.LoanBooks.Contains(book), "bug: we took a book out of the libary,however its in the the loan book list");
+            Assert.IsFalse(libaryAccount.RreservedBooks.Contains(book), "bug : we took a book out of the library,however it is still in the libary");
             Assert.AreEqual(book.Status, Book.BookStatus.OutOfTheLibrary, "bug: we took a book out of the libary,however is the loan book list");
         }
         #endregion d:
@@ -54,8 +54,8 @@ namespace Libary.UnitTest
             //Assert
             Assert.AreEqual(actual, expected);
             Assert.IsTrue(actual, "bug: a child reder didn't mange to loan a children book");
-            Assert.IsTrue(libaryAccount.LoanBooks.Contains(book), "bug: we took a book out of the libary,however is the loan book list");
-            Assert.IsFalse(libaryAccount.RreservedBooks.Contains(book), "bug : we took a book out of the library,however it is still ma");
+            Assert.IsTrue(libaryAccount.LoanBooks.Contains(book), "bug: we took a book out of the libary,however its still in the loan book list");
+            Assert.IsFalse(libaryAccount.RreservedBooks.Contains(book), "bug :we took a book out of the library,however it is still in the libary");
             Assert.AreEqual(book.Status, Book.BookStatus.OutOfTheLibrary, "bug: we took a book out of the libary,however is the loan book list");
         }
         [TestMethod]

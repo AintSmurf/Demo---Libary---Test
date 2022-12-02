@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LoanBook>
+
+
+	// First Test
+	<func>
+		<val1>Bob</val1>
+		<val2>Marley</val2>
+		<expectedResult>True</expectedResult>
+	</func>
+
+	<func>
+		<val1>John</val1>
+		<val2>Snow</val2>
+		<expectedResult>True</expectedResult>
+	</func>
+
+	<func>
+		<val1>David</val1>
+		<val2>Beckham</val2>
+		<expectedResult>True</expectedResult>
+	</func>
+
+
+	// Second Test
+	<Debt>
+		<val1>David</val1>
+		<val2>Beckham</val2>
+		<expectedResult>False</expectedResult>
+		<debt>5</debt>
+	</Debt>
+
+
+	// Third Test
+	<func1>
+		<val1>Bob</val1>
+		<val2>Marley</val2>
+		<val3>David</val3>
+		<val4>Beckham</val4>
+		<expectedResult>False</expectedResult>
+	</func1>
+
+</LoanBook>
